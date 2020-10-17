@@ -10,6 +10,20 @@ require('dotenv').config()
 // const dotenv = require('dotenv')
 // dotenv.config()
 
+const baseDatos = require('./src/lib/db')
+const server = require('./src/server.js')
+
 console.log('env: ', process.env.DB_HOST)
 console.log('env: ', process.env.DB_USER)
 console.log('env: ', process.env.DB_NAME)
+
+baseDatos.connect()
+  .then(() => {
+    console.log('DB connect')
+    server.listen(8080, () => {
+      console.log('server ready')
+    })
+  })
+  .catch((error) => {
+    console.error('DB error', error)
+  })
