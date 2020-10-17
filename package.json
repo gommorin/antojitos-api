@@ -1,0 +1,17 @@
+{
+  "name": "antojitos-api",
+  "version": "1.0.0",
+  "description": "una api con los antojitos que son tacos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "antojitos",
+    "tacos",
+    "practica",
+    "integradora"
+  ],
+  "author": "lucho",
+  "license": "ISC"
+}
